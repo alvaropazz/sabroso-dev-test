@@ -35,7 +35,6 @@
 }
 
 .user-main {
-  height: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,3 +50,64 @@
   border: none;
   font-weight: bolder;
 }
+
+.user-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.user-id {
+  flex: 40%;
+  font-size: .7em;
+  padding-left: 15px;
+}
+
+.user-details {
+  flex: 20%;
+}
+
+.user-subtotal {
+  flex: 20%;
+  font-size: .9em;
+  color: #85c8dd;
+  font-weight: bolder;
+}
+
+.user-total {
+  flex: 20%;
+  font-size: .9em;
+  color: #85c8dd;
+  font-weight: bolder;
+}
+
+.container-id {
+  flex: 40%;
+  font-size: 1em;
+  color: #424242;
+  font-weight: bolder;
+}
+
+.container-details {
+  flex: 20%;
+  font-size: 1em;
+  color: #424242;
+  font-weight: bolder;
+}
+
+.container-subtotal {
+  flex: 20%;
+  font-size: 1em;
+  color: #424242;
+  font-weight: bolder;
+}
+
+.container-total {
+  flex: 20%;
+  font-size: 1em;
+  color: #424242;
+  font-weight: bolder;
+}
+

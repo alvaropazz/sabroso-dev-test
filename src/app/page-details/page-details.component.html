@@ -1,19 +1,17 @@
 <div class="main">
-  <nav class="navigation">
-    <ul class="btn-container">
-      <li [routerLink]="'/pageShopping'">Shop</li>
-      <li [routerLink]="'/pageUser'">Users</li>
-    </ul>
-
-    <p>{{userOrder | json}}</p>
-  </nav>
-
   <div class="details-main">
-      <div *ngFor="let x of details">
-        <p class="product-name">{{x.name}}</p>
-        <p class="product-details">{{x.quantity}}</p>
-        <p class="product-total">{{x.checkoutPrice}}</p>
+    <div class="details-info">
+      <p class="container-name">Name</p>
+      <p class="container-quantity">Quantity</p>
+      <p class="container-total">Subtotal</p>
     </div>
-    <h1>{{total}}</h1>
+    <div *ngFor="let x of details">
+      <div class="details-info">
+        <p class="product-name">{{x.name}}</p>
+        <p class="product-quantity">{{x.quantity}}</p>
+        <p class="product-total">$ {{x.checkoutPrice}}</p>
+      </div>
+    </div>
+    <p class="order-total">Total: $ {{total}}</p>
   </div>
 </div>

@@ -6,11 +6,17 @@
   </nav>
 
   <div class="user-main">
-    <div *ngFor="let x of orders">
+    <div class="user-container">
+      <p class="container-id">User ID</p>
+      <p class="container-details">Order Details</p>
+      <p class="container-subtotal">Subtotal</p>
+      <p class="container-total">Total</p>
+    </div>
+    <div *ngFor="let x of orders" class="user-container">
       <p class="user-id">{{x.user_id}}</p>
-      <p class="user-details"><button [routerLink]="['/pageUser', x.id]" class="details">Details</button></p>
-      <p class="user-subtotal">{{x.subtotal}}</p>
-      <p class="user-total">{{x.total}}</p>
+      <p class="user-details"><button [routerLink]="['/pageUser', x.id]" class="details">More</button></p>
+      <p class="user-subtotal">$ {{x.subtotal}}</p>
+      <p class="user-total">$ {{x.total}}</p>
     </div>
   </div>
 </div>
