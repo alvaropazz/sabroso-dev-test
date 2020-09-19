@@ -1,18 +1,22 @@
 <div class="main">
   <nav class="navigation">
     <ul class="btn-container">
-      <li><a [routerLink]="'/pageUser'">Users</a></li>
+      <li [routerLink]="'/pageUser'">Users</li>
     </ul>
   </nav>
 
   <div class="shopping-main">
     <div class="shopping-cart">
-      <ng-container *ngFor="let unit of products">
-        <h3 class="product-name">{{unit.name}}</h3>
-        <h4 class="product-description">{{unit.description}}</h4>
-        <h4 class="product-price">{{unit.price}}</h4>
-      </ng-container>
+      <div *ngFor="let unit of products" class="info-container">
+        <div class="product-info">
+          <p class="product-name">{{unit.name}}</p>
+          <p class="product-description">{{unit.description}}</p>
+        </div>
+        <p class="product-price">${{unit.price}}</p>
+      </div>
     </div>
-    <div class="shopping-checkout"></div>
+    <div class="shopping-checkout">
+      <button type="submit" class="checkout">Checkout</button>
+    </div>
   </div>
 </div>

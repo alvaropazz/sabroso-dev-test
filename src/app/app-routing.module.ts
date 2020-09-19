@@ -6,8 +6,16 @@ import { PageUserComponent } from './page-user/page-user.component';
 
 const routes: Routes = [
   {path: 'pageShopping', component: PageShoppingComponent},
-  {path: 'pageUser', component: PageUserComponent},
-  {path: 'pageDetails', component: PageDetailsComponent}
+  {path: 'pageUser', 
+  component: PageUserComponent,
+  children: [
+    {
+      path: ':id',
+      component: PageDetailsComponent
+    }
+  ]
+  },
+  // {path: 'pageDetails', component: PageDetailsComponent}
 ];
 
 @NgModule({
