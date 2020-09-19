@@ -83,6 +83,10 @@
 .shopping-checkout {
   flex: 35%;
   text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  height: 100%;
   /* border: 1px solid black; */
 }
 
