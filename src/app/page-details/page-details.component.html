@@ -1,9 +1,13 @@
+<h1>{{user_id}}</h1>
+
 <div class="main">
   <nav class="navigation">
     <ul class="btn-container">
       <li [routerLink]="'/pageShopping'">Shop</li>
       <li [routerLink]="'/pageUser'">Users</li>
     </ul>
+
+    <p>{{userOrder | json}}</p>
   </nav>
 
   <div class="details-main">

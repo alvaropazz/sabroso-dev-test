@@ -7,19 +7,32 @@
 
   <div class="shopping-main">
     <div class="shopping-cart">
-      <div *ngFor="let unit of products" class="info-container">
+      <div *ngFor="let unit of products; let i = index" class="info-container">
         <div class="product-info">
           <p class="product-name">{{unit.name}}</p>
           <p class="product-description">{{unit.description}}</p>
         </div>
-        <p class="product-price">${{unit.price}}</p>
+        <div class="product-order">
+          <p class="product-price">${{unit.price}}</p>
+          <div class="product-quantity">
+            <button class="plusminus" (click)="handleMinus(i)">-</button>
+          
+            <h1>{{unit.quantity}}</h1>
+            <button class="plusminus" (click)="handlePlus(i)">+</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="shopping-checkout">
-      <div class="price-info">
-        
+      <div *ngFor="let x of products" class="price-info">
+        <div *ngIf="x.quantity > 0">
+          <p class="product-name-ch">{{x.name}}</p>
+          <p class="product-quantity-ch">{{x.quantity}}</p>
+          <p class="product-quantity-ch">{{x.checkoutPrice}}</p>
+        </div>  
       </div>
-      <button type="submit" class="checkout">Checkout</button>
+      <p class="product price-ch">{{productTotal}}</p>
+      <button type="submit" class="checkout" (click)="sendOrder()">Checkout</button>
     </div>
   </div>
 </div>

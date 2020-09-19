@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductFetchService } from '../product-fetch.service';
 
 @Component({
   selector: 'app-page-user',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ProductFetchService: ProductFetchService) { }
 
+  orders;
+  
   ngOnInit(): void {
+    this.ProductFetchService.getOrders().subscribe((data)=>{
+    this.orders = data
+  })
   }
-
 }

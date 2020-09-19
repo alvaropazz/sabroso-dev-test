@@ -6,11 +6,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductFetchService {
 
-  private source = 'https://run.mocky.io/v3/fbedb082-ed1f-4788-bba6-b7e61c1536ed'
+  private productSource = 'https://run.mocky.io/v3/fbedb082-ed1f-4788-bba6-b7e61c1536ed';
+  private orderDestination = 'https://5f65e2ef43662800168e7089.mockapi.io/orders';
+  
 
   constructor(public http: HttpClient) { }
 
   getProducts() {
-    return this.http.get(this.source)
+    return this.http.get(this.productSource)
+  }
+
+  sendOrder(obj) {
+    return this.http.post(this.orderDestination, obj)
+  }
+
+  getOrders() {
+    return this.http.get(this.orderDestination)
+  }
+
+  getDetails(id) {
+    return this.http.get(this.orderDestination + `/${id}`)
   }
 }
