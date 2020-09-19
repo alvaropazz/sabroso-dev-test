@@ -14,24 +14,26 @@
         </div>
         <div class="product-order">
           <p class="product-price">${{unit.price}}</p>
+          <!-- counter -->
           <div class="product-quantity">
             <button class="plusminus" (click)="handleMinus(i)">-</button>
-          
-            <h1>{{unit.quantity}}</h1>
+            <p class="num">{{unit.quantity}}</p>
             <button class="plusminus" (click)="handlePlus(i)">+</button>
           </div>
+          <!-- counter -->
         </div>
       </div>
     </div>
     <div class="shopping-checkout">
-      <div *ngFor="let x of products" class="price-info">
-        <div *ngIf="x.quantity > 0">
+      <div *ngFor="let x of products">
+        <div *ngIf="x.quantity > 0" class="price-info">
           <p class="product-name-ch">{{x.name}}</p>
-          <p class="product-quantity-ch">{{x.quantity}}</p>
-          <p class="product-quantity-ch">{{x.checkoutPrice}}</p>
+          <p class="product-quantity-ch"><span class="product-titles">Quantity:</span> {{x.quantity}}</p>
+          <p class="product-price-ch"><span class="product-titles">Product Subtotal:</span> ${{x.checkoutPrice}}</p>
         </div>  
       </div>
-      <p class="product price-ch">{{productTotal}}</p>
+      <p class="product-totals-ch"><span class="totals-title">Subtotal:</span> ${{subtotal}}</p>
+      <p class="product-totals-ch"><span class="totals-title">Total (+12% IVA):</span> ${{productTotal}}</p>
       <button type="submit" class="checkout" (click)="sendOrder()">Checkout</button>
     </div>
   </div>

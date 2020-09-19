@@ -14,6 +14,7 @@ export class PageShoppingComponent implements OnInit {
   productTotal = 0;
   value = 0;
   IVA = 1.12;
+  subtotal = 0;
 
   handleMinus(i) {  
     let q = this.products[i].quantity - 1;    
@@ -33,6 +34,8 @@ export class PageShoppingComponent implements OnInit {
     this.products[i].checkoutPrice = Number((this.products[i].price * this.products[i].quantity).toFixed(2));
 
     this.productTotal = Number(this.products.reduce((acc,p)=>acc + p.checkoutPrice * this.IVA,0).toFixed(2));
+
+    this.subtotal = Number(this.products.reduce((acc,p)=>acc + p.checkoutPrice,0).toFixed(2));
   }
 
   products;
