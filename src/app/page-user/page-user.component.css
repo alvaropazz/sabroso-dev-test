@@ -69,6 +69,10 @@
   flex: 20%;
 }
 
+.details:hover {
+  cursor: pointer;
+}
+
 .user-subtotal {
   flex: 20%;
   font-size: .9em;

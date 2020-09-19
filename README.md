@@ -1,27 +1,13 @@
-# ShoppingCart
+# Sabroso Dev Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+Este projecto se desarrollo como un ejercicio de prueba para [sabroso.co](https://sabroso.co/).
+
+## API Source
+
+- Para la operación `get` de productos se utilizó el siguiente Mock API: `https://run.mocky.io/v3/fbedb082-ed1f-4788-bba6-b7e61c1536ed`.
+- Para las operaciones `get` y `post` se utilizó el siguiente Mock API: `https://5f65e2ef43662800168e7089.mockapi.io/:endpoint`.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Correr `ng serve` para un nuevo servidor. Abrir el enlace `http://localhost:4200/`.
