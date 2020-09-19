@@ -47,7 +47,7 @@ export class PageShoppingComponent implements OnInit {
     const req = {
       id: uuidv4(),
       user_id: uuidv4(),
-      details: JSON.stringify(this.products.filter(p=>p.quantity > 0).map(p=>({quantity: p.quantity, name:p.name}))),
+      details: JSON.stringify(this.products.filter(p=>p.quantity > 0).map(p=>({quantity: p.quantity, name:p.name, checkoutPrice: p.checkoutPrice}))),
       subtotal: Number((this.productTotal/this.IVA).toFixed(2)),
       total: this.productTotal,
     };

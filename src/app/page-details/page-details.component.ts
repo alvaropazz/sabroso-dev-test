@@ -10,22 +10,23 @@ import { ProductFetchService } from '../product-fetch.service';
 })
 export class PageDetailsComponent implements OnInit {
 
-  public user_id
+  public details: object[];
+  public total;
 
   constructor(private route: ActivatedRoute, private service: ProductFetchService) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      this.user_id = params.get('id');
-      this.getUserOrder(this.user_id);
+    this.route.paramMap.subscribe((params) => {      
+      this.getUserOrder(params.get('id'));
     })
   }
 
   userOrder;
 
   getUserOrder(user_id){
-    this.service.getDetails(user_id).subscribe(data=>{
-      this.userOrder = data;
+    this.service.getDetails(user_id).subscribe((data: {details: string})=>{
+      this.details = JSON.parse(data.details);
+      this.total = this.details.reduce((acc,p)=>acc+p['checkoutPrice'], 0);
     })
   }
 
