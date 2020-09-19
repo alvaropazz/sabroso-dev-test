@@ -7,13 +7,12 @@
 
   <div class="shopping-main">
     <div class="shopping-cart">
-      <ng-container>
-        <h3 class="product-name"></h3>
-        <h4 class="product-description"></h4>
-        <h4 class="product-price"></h4>
+      <ng-container *ngFor="let unit of products">
+        <h3 class="product-name">{{unit.name}}</h3>
+        <h4 class="product-description">{{unit.description}}</h4>
+        <h4 class="product-price">{{unit.price}}</h4>
       </ng-container>
     </div>
     <div class="shopping-checkout"></div>
   </div>
 </div>
-<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductFetchService } from '../product-fetch.service'
 
 @Component({
   selector: 'app-page-shopping',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageShoppingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ProductFetchService: ProductFetchService) { }
+
+  products;
 
   ngOnInit(): void {
+    this.ProductFetchService.getProducts().subscribe((data) => {
+      this.products = data
+    })
   }
 
 }
