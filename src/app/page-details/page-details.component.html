@@ -1,16 +1,16 @@
 <div class="main">
   <nav class="navigation">
     <ul class="btn-container">
-      <li><a [routerLink]="'/pageShopping'">Shop</a></li>
-      <li><a [routerLink]="'/pageUser'">Users</a></li>
+      <li [routerLink]="'/pageShopping'">Shop</li>
+      <li [routerLink]="'/pageUser'">Users</li>
     </ul>
   </nav>
 
   <div class="details-main">
-    <ng-container>
+    <div>
       <p class="product-name"></p>
       <p class="product-number"></p>
       <p class="product-total"></p>
-    </ng-container>
+    </div>
   </div>
 </div>

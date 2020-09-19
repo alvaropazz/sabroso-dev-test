@@ -1,17 +1,17 @@
 <div class="main">
   <nav class="navigation">
     <ul class="btn-container">
-      <li><a [routerLink]="'/pageShopping'">Shop</a></li>
+      <li [routerLink]="'/pageShopping'">Shop</li>
     </ul>
   </nav>
 
   <div class="user-main">
-    <ng-container>
+    <div>
       <p class="user-id"></p>
-      <p class="user-details"><button [routerLink]="'/pageDetails/:id'">Details</button></p>
+      <p class="user-details"><button [routerLink]="'/pageDetails/:id'" class="details">Details</button></p>
       <p class="user-subtotal"></p>
       <p class="user-total"></p>
-    </ng-container>
+    </div>
   </div>
 
   
