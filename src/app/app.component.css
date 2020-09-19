@@ -1,0 +1,16 @@
+.main {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+.btn-container li {
+  list-style: none;
+  border: 1px solid black;
+}
