@@ -15,4 +15,6 @@ html {
 
 body {
   margin: 50px auto;
+  font-size: 10px;
+  background: lightblue;
 }
